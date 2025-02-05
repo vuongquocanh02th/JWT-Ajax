@@ -2,7 +2,7 @@
 let token = getToken();
 function showAllProduct() {
     $.ajax({
-        // de su dung token
+        // Use token
         headers:{
             "Authorization": "Bearer " + token
         },
@@ -26,7 +26,7 @@ function showAllProduct() {
 showAllProduct();
 
 
-// Xoa
+// Delete
 function deleteById(id) {
     // chan su kien mac dinh cua the
     event.preventDefault();

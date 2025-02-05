@@ -1,5 +1,5 @@
 function login() {
-    // lay du lieu
+    // get data
     let name = document.getElementById('name').value;
     let password = document.getElementById('password').value;
     let user={
@@ -15,10 +15,7 @@ function login() {
         method: "POST",
         data: JSON.stringify(user),
         success: function (data){
-            // thay vi ghi vao console
-            // console.log(data)
             localStorage.setItem("token",JSON.stringify(data));
-            //     chuyen trang sang product
             window.location.href="..product/product.html";
         }
     })
